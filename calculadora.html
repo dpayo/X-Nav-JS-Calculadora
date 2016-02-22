@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>calculadora bin </title>
+     <style type="text/css">
+        span,a{
+          border-style: solid;
+          border-width: 5px;
+          padding-top: 10px;
+          padding-right: 10px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+        }
+     </style>
+   </head>
+   <body>
+     <script type="text/javascript" charset="utf-8">
+       var op;
+       function zero(){
+       element = document.getElementById('resultado');
+       element.innerHTML = '0';
+
+
+       }
+
+       function one(){
+       element = document.getElementById('resultado');
+       element.innerHTML='1';
+
+       }
+
+       function plus(){
+       element = document.getElementById('resultado');
+       op=parseInt(element.innerHTML)
+       element.innerHTML="+"
+       }
+       function suma(){
+       element = document.getElementById('resultado');
+       op1=parseInt(element.innerHTML)
+       element.innerHTML=op^op1;
+       if(op == 1 && op1==1){
+         element.innerHTML="1"+(op^op1)
+       }
+
+       }
+     </script>
+  <h1> calculadora binaria </h1>
+  <p><a href = "javascript:one()"> 1 </a><a href = "javascript:zero()"> 0 </a>
+  <a href = "javascript:plus()"> + </a><a href = "javascript:suma()"> = </a></a><span id ="resultado"> </span></p>
+
+   </body>
+</html>
